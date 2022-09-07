@@ -12,7 +12,7 @@ Very simple app that uses CoreML model to transform image to anime style image.
 
 ### CoreML model creator
 
-- john-rocky/CoreML-Models [website](https://github.com/john-rocky/CoreML-Models)
+- john-rocky/CoreML-Models [github](https://github.com/john-rocky/CoreML-Models)
 
 ### Contact
 
