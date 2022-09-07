@@ -16,7 +16,7 @@ func testModel(buffer:CVImageBuffer)->animegan2face_paint_512_v2Output?{
         let prediction = try model.prediction(input: buffer)
         return prediction
     } catch {
-        
+        print(error)
     }
     return nil
 }
@@ -82,29 +82,41 @@ struct ContentView: View {
     @State private var isShowingImgPicker = false
     @State private var img = UIImage(named: "avatar")!
     @State private var resultImg:UIImage?
+    @State private var isProcessing = false
     var body: some View {
-        VStack{
-            Image(uiImage: img)
-                .resizable()
-                .scaledToFit()
-                .padding()
-                .onTapGesture { isShowingImgPicker.toggle()}
-            Spacer()
-            Image(uiImage: resultImg ?? img)
-                .resizable()
-                .scaledToFit()
-                .rotationEffect(Angle(degrees: 180))
-                .padding()
+        NavigationView{
+            VStack{
+                Image(uiImage: img)
+                    .resizable()
+                    .scaledToFit()
+                    .padding()
+                    .onTapGesture { isShowingImgPicker.toggle()}
+                Spacer()
+                Image(uiImage: resultImg ?? UIImage(named: "avatar")!)
+                    .resizable()
+                    .scaledToFit()
+                    .rotationEffect(Angle(degrees: (resultImg != nil) ? 180 : 0))
+                    .padding()
+            }
+            .navigationTitle("Photo to Cartoon")
+            .navigationBarTitleDisplayMode(.inline)
+            .navigationBarItems(leading: isProcessing ? ProgressView() : nil,  trailing: Button(action: {
+                resultImg = nil
+                img = UIImage(named: "avatar")!
+            }, label: {  Text("Clear") }))
         }
-        .navigationTitle("Get Image")
+        
         .sheet(isPresented: $isShowingImgPicker) {
             ImagePicker(image: $img)
         }
         .onChange(of: img) { newValue in
-            
-            let buffer = pixelBufferFromImage(image: newValue)
-            if let draw = testModel(buffer: buffer) {
-                resultImg = UIImage(pixelBuffer:draw.activation_out)
+            isProcessing = true
+            Task{
+                let buffer = pixelBufferFromImage(image: newValue)
+                if let draw = testModel(buffer: buffer) {
+                    resultImg = UIImage(pixelBuffer:draw.activation_out)
+                }
+                isProcessing = false
             }
             
         }

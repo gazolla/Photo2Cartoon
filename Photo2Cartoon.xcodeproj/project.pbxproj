@@ -23,6 +23,7 @@
 		C32FAF0B28C8181100C105D1 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		C32FAF1228C8197300C105D1 /* animegan2face_paint_512_v2.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = animegan2face_paint_512_v2.mlmodel; sourceTree = "<group>"; };
 		C32FAF1428C8263D00C105D1 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		C32FAF1628C8D12B00C105D1 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +40,7 @@
 		C32FAEF828C8180C00C105D1 = {
 			isa = PBXGroup;
 			children = (
+				C32FAF1628C8D12B00C105D1 /* README.md */,
 				C32FAF0328C8180C00C105D1 /* Photo2Cartoon */,
 				C32FAF0228C8180C00C105D1 /* Products */,
 			);
