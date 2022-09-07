@@ -11,6 +11,8 @@
 		C32FAF0728C8180C00C105D1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32FAF0628C8180C00C105D1 /* ContentView.swift */; };
 		C32FAF0928C8181100C105D1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C32FAF0828C8181100C105D1 /* Assets.xcassets */; };
 		C32FAF0C28C8181100C105D1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C32FAF0B28C8181100C105D1 /* Preview Assets.xcassets */; };
+		C32FAF1328C8197300C105D1 /* animegan2face_paint_512_v2.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = C32FAF1228C8197300C105D1 /* animegan2face_paint_512_v2.mlmodel */; };
+		C32FAF1528C8263D00C105D1 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32FAF1428C8263D00C105D1 /* ImagePicker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +21,8 @@
 		C32FAF0628C8180C00C105D1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		C32FAF0828C8181100C105D1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C32FAF0B28C8181100C105D1 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		C32FAF1228C8197300C105D1 /* animegan2face_paint_512_v2.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = animegan2face_paint_512_v2.mlmodel; sourceTree = "<group>"; };
+		C32FAF1428C8263D00C105D1 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,10 +55,12 @@
 		C32FAF0328C8180C00C105D1 /* Photo2Cartoon */ = {
 			isa = PBXGroup;
 			children = (
+				C32FAF1228C8197300C105D1 /* animegan2face_paint_512_v2.mlmodel */,
 				C32FAF0428C8180C00C105D1 /* Photo2CartoonApp.swift */,
 				C32FAF0628C8180C00C105D1 /* ContentView.swift */,
 				C32FAF0828C8181100C105D1 /* Assets.xcassets */,
 				C32FAF0A28C8181100C105D1 /* Preview Content */,
+				C32FAF1428C8263D00C105D1 /* ImagePicker.swift */,
 			);
 			path = Photo2Cartoon;
 			sourceTree = "<group>";
@@ -138,6 +144,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				C32FAF0728C8180C00C105D1 /* ContentView.swift in Sources */,
+				C32FAF1528C8263D00C105D1 /* ImagePicker.swift in Sources */,
+				C32FAF1328C8197300C105D1 /* animegan2face_paint_512_v2.mlmodel in Sources */,
 				C32FAF0528C8180C00C105D1 /* Photo2CartoonApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
